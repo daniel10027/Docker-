@@ -104,7 +104,7 @@
 
 ![Image of Yaktocat](https://www.lebigdata.fr/wp-content/uploads/2018/05/docker-avantages.jpg)
 
-    ````
+    
     La plateforme Docker présente de nombreux avantages. 
     Elle permet de composer, de créer, de déployer et d’échelonner rapidement des 
     containers sur les hôtes Docker. Elle offre aussi un haut degré de portabilité,
@@ -126,7 +126,8 @@
     
 
 
-- [x] Suivant =>> : Installation 
+- [x] Suivant =>> : 
+### Installation 
 
 
 
