@@ -11,6 +11,7 @@ la perte de données et les paniques du noyau se produisent fréquemment dans ce
 ```
 Vérifiez votre version actuelle de Linux avec uname -r. Vous devriez voir quelque chose comme
 3.10.[alphanumeric string].x86_64.
+````
 
 ```js
 Debian et Ubuntu
