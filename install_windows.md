@@ -6,8 +6,7 @@
          et reconnue par Windows.
          Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider :
          [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
-         
-         ![Image ofYaktocat] (https://www.noobunbox.net/wpcontent/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
+ (https://www.noobunbox.net/wpcontent/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
         
          
 • Installation 
