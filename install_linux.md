@@ -37,11 +37,11 @@ Si oui, vous devez activer les rétroportages (sinon, ignorez cette section):
  3. Supprimez les entrées existantes.
  4. Ajoutez une entrée pour les rétroportages sur Debian Wheezy:
  
- ```python
+ ```js
  deb http://http.debian.net/debian wheezy-backports main
  ```
  5. Mettez à jour vos packages:
- ```python
+ ```js
  apt-get update -y
  ```
  
@@ -51,19 +51,19 @@ Vous devez mettre à jour votre noyau:
 
 1. Ouvrez un terminal sur votre système.
 2. Mettre à jour l'aptitude:
-```python
+```js
  sudo apt-get update -y
  ```
 3. Installez les packages supplémentaires:
- ```python
+ ```js
  sudo apt-get install -y linux-image-generic-lts-trusty linux-headers-generic-lts-trusty
  ```
 4. Dans un environnement graphique Ubuntu, vous devez en outre exécuter ce qui suit:
- ```python
+ ```js
 sudo apt-get install -y xserver-xorg-lts-trusty libgl1-mesa-glx-lts-trusty
 ```
 5. Redémarrez votre système:
-```python
+```js
 sudo reboot
 ```
 
@@ -72,17 +72,17 @@ Mettre à jour l'aptitude
 1. Connectez-vous à votre système avec un utilisateur disposant de sudoprivilèges.
 2. Ouvrez une fenêtre de terminal.
 3. Purgez les anciens référentiels:
- ```python
+ ```js
  sudo apt-get purge -y lxc-docker* && sudo apt-get -y purge docker.io*
  ```
  
 4. Mettez à jour vos packages, en vous assurant qu'ils aptfonctionnent avec httpset que
 le serveur dispose de certificats CA:
- ```python
+ ```js
  sudo apt-get update -y && sudo apt-get install -y apt-transport-https ca-certificates
  ```
 5. Obtenez la nouvelle clé GPG:
-```python
+```js
  sudo apt-key adv --keyserver hkp://p80.pool.sks-keyservers.net:80 --recv-keys 58118E89F3A912897C070ADBF76221572C52609D
  ```
 
@@ -103,109 +103,117 @@ Debian Stretch / Sid	deb https://apt.dockerproject.org/repo debian-stretch main
 
 8. Enregistrez et fermez le fichier.
 9. Mettre à jour Aptitude à nouveau:
- ```python
+ ```js
  sudo apt-get update -y
  ```
 
 10. Vérifiez que Aptitude tire du bon référentiel:
-```python
+```js
 sudo apt-cache policy docker-engine
 ``` 
 
 ### Installer Docker
 Si vous utilisez Ubuntu Trusty, Wily ou Xenial, installez le linux-image-extrapackage du noyau:
-```python
+```js
 sudo apt-get update -y && sudo apt-get install -y linux-image-extra-$(uname -r)
 ```
 
 Installez Docker:
-```python
+```js
 sudo apt-get install docker-engine -y
 ````
 
 Démarrer Docker:
-```
+```js
  sudo service docker start
  ````
  
 Vérifiez Docker:
-```
+```js
  sudo docker run hello-world
  ```
  
 • Le groupe Docker
 
-    Si vous préférez, vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root). Cependant , 
+    Si vous préférez,
+    vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root).
+    Cependant , 
     comme dockerdoit y avoir sudoaccès, dockerreçoit le même accès que root.
 
 Exécutez la commande suivante pour créer un groupe Docker sur Ubuntu:
- ```python
+ ```js
  sudo groupadd docker && sudo usermod -aG docker ubuntu
  ```
  
 Déconnectez-vous et reconnectez-vous.
 
 Exécutez la commande suivante pour créer un groupe Docker sur Debian:
+```js
  sudo groupadd docker && sudo gpasswd -a ${USER} docker && sudo service docker restart
-Vous pouvez spécifier un utilisateur au lieu de ${USER}si vous préférez.
+ ```
+• Vous pouvez spécifier un utilisateur au lieu de ${USER}si vous préférez.
 
 Vérifiez une installation Docker réussie:
+ ```js 
  docker run hello-world
+ ```
+ 
 Red Hat Enterprise Linux (RHEL) et CentOS
 Docker fonctionne sur RHEL 7 et CentOS 7.
 
-Installer Docker
-Installer avec Yum
-Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
-Mettez à jour votre système: sudo yum update -y.
-Ajoutez le repo yum (utilisez le code ci-dessous pour RHEL 7 et CentOS 7):
- $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
- [dockerrepo]
- name=Docker Repository
- baseurl=https://yum.dockerproject.org/repo/main/centos/7/
- enabled=1
- gpgcheck=1
- gpgkey=https://yum.dockerproject.org/gpg
- EOF
-Installez Docker:
- sudo yum install docker-engine -y
-Démarrer Docker:
- sudo service docker start
-Vérifiez Docker:
- sudo docker run hello-world
-Installer avec le script d'installation Docker
-Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
-Mettez à jour votre système:
- sudo yum update -y
-Exécutez le script d'installation de Docker:
- curl -fsSL https://get.docker.com | sh;
-Ce script ajoute le docker.reporéférentiel et installe Docker.
+    Installer Docker
+    Installer avec Yum
+    Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
+    Mettez à jour votre système: sudo yum update -y.
+    Ajoutez le repo yum (utilisez le code ci-dessous pour RHEL 7 et CentOS 7):
+     $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+     [dockerrepo]
+     name=Docker Repository
+     baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+     enabled=1
+     gpgcheck=1
+     gpgkey=https://yum.dockerproject.org/gpg
+     EOF
+    Installez Docker:
+     sudo yum install docker-engine -y
+    Démarrer Docker:
+     sudo service docker start
+    Vérifiez Docker:
+     sudo docker run hello-world
+    Installer avec le script d'installation Docker
+    Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
+    Mettez à jour votre système:
+     sudo yum update -y
+    Exécutez le script d'installation de Docker:
+     curl -fsSL https://get.docker.com | sh;
+    Ce script ajoute le docker.reporéférentiel et installe Docker.
 
-Démarrer Docker:
- sudo service docker start
-Vérifiez Docker:
- sudo docker run hello-world
-Le groupe Docker
-Si vous préférez, vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root). Cependant , comme dockerdoit y avoir sudoaccès, dockerreçoit le même accès que root.
+    Démarrer Docker:
+     sudo service docker start
+    Vérifiez Docker:
+     sudo docker run hello-world
+    Le groupe Docker
+    Si vous préférez, vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root). Cependant , comme dockerdoit y avoir sudoaccès, dockerreçoit le même accès que root.
 
-Exécutez la commande suivante pour créer un groupe Docker et ajouter votre utilisateur au groupe (remplacez USERNAME par votre nom d'utilisateur):
- sudo groupadd docker && sudo usermod -aG docker USERNAME
-Déconnectez-vous et reconnectez-vous.
-Vérifiez que Docker fonctionne sans sudo:
- docker run hello-world
-Démarrer Docker au démarrage
-Exécutez l'une des opérations suivantes:
+    Exécutez la commande suivante pour créer un groupe Docker et ajouter votre utilisateur au groupe (remplacez USERNAME par votre nom d'utilisateur):
+     sudo groupadd docker && sudo usermod -aG docker USERNAME
+    Déconnectez-vous et reconnectez-vous.
+    Vérifiez que Docker fonctionne sans sudo:
+     docker run hello-world
+    Démarrer Docker au démarrage
+    Exécutez l'une des opérations suivantes:
 
-sudo chkconfig docker on
-sudo systemctl enable docker
-Problèmes courants
-Remarque: les membres du groupe Docker ont des privilèges root . Hardening Docker est traité dans un futur tutoriel.
+    sudo chkconfig docker on
+    sudo systemctl enable docker
+    Problèmes courants
+    Remarque: les membres du groupe Docker ont des privilèges root . Hardening Docker est traité dans un futur tutoriel.
 
 Ubuntu
-Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04, vous devez mettre à jour votre noyau.
 
-Debian
-Si vous exécutez Debian Wheezy, vous devez mettre à jour les sources avec des rétroportages.
+    Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04, vous devez mettre à jour votre noyau.
 
-«Impossible de se connecter au démon Docker. Le «démon docker» est-il en cours d'exécution sur cet hôte? »
-Si vous obtenez cette erreur, vous devez désactiver DOCKER_HOST; exécuter unset DOCKER_HOSTpour effacer la variable.
+    Debian
+    Si vous exécutez Debian Wheezy, vous devez mettre à jour les sources avec des rétroportages.
+
+    «Impossible de se connecter au démon Docker. Le «démon docker» est-il en cours d'exécution sur cet hôte? »
+    Si vous obtenez cette erreur, vous devez désactiver DOCKER_HOST; exécuter unset DOCKER_HOSTpour effacer la variable.
