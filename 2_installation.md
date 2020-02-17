@@ -65,4 +65,9 @@ Cette version est soumise à une licence fournie par Docker Inc.
          • Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
          ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
          
+         Installation 
+1. Commencez par télécharger [Docker Toolbox](https://www.docker.com/toolbox) et installez le programme.
+Notez que pendant l’installation Virtualbox ne doit pas être lancé.
+2.
+         
          
