@@ -158,62 +158,108 @@ Vérifiez une installation Docker réussie:
  docker run hello-world
  ```
  
-Red Hat Enterprise Linux (RHEL) et CentOS
-Docker fonctionne sur RHEL 7 et CentOS 7.
+• Red Hat Enterprise Linux (RHEL) et CentOS
+• Docker fonctionne sur RHEL 7 et CentOS 7.
 
-    Installer Docker
-    Installer avec Yum
-    Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
-    Mettez à jour votre système: sudo yum update -y.
-    Ajoutez le repo yum (utilisez le code ci-dessous pour RHEL 7 et CentOS 7):
-     $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
-     [dockerrepo]
-     name=Docker Repository
-     baseurl=https://yum.dockerproject.org/repo/main/centos/7/
-     enabled=1
-     gpgcheck=1
-     gpgkey=https://yum.dockerproject.org/gpg
-     EOF
-    Installez Docker:
-     sudo yum install docker-engine -y
-    Démarrer Docker:
-     sudo service docker start
-    Vérifiez Docker:
-     sudo docker run hello-world
-    Installer avec le script d'installation Docker
-    Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
-    Mettez à jour votre système:
-     sudo yum update -y
-    Exécutez le script d'installation de Docker:
-     curl -fsSL https://get.docker.com | sh;
-    Ce script ajoute le docker.reporéférentiel et installe Docker.
+- Installer Docker
+    - Installer avec Yum
+    
+        1. Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
+        Mettez à jour votre système:
 
-    Démarrer Docker:
-     sudo service docker start
-    Vérifiez Docker:
-     sudo docker run hello-world
-    Le groupe Docker
-    Si vous préférez, vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root). Cependant , comme dockerdoit y avoir sudoaccès, dockerreçoit le même accès que root.
+        ```js
+        sudo yum update -y.
+        ```
+        2. Ajoutez le repo yum (utilisez le code ci-dessous pour RHEL 7 et CentOS 7):
 
-    Exécutez la commande suivante pour créer un groupe Docker et ajouter votre utilisateur au groupe (remplacez USERNAME par votre nom d'utilisateur):
-     sudo groupadd docker && sudo usermod -aG docker USERNAME
-    Déconnectez-vous et reconnectez-vous.
+        ```js
+         $ sudo tee /etc/yum.repos.d/docker.repo <<-'EOF'
+         [dockerrepo]
+         name=Docker Repository
+         baseurl=https://yum.dockerproject.org/repo/main/centos/7/
+         enabled=1
+         gpgcheck=1
+         gpgkey=https://yum.dockerproject.org/gpg
+         EOF
+         ````
+
+        3. Installez Docker:
+         ```js 
+         sudo yum install docker-engine -y
+         ```
+
+        4. Démarrer Docker:
+         ```js 
+         sudo service docker start
+         ```
+        5. Vérifiez Docker:
+         ```js 
+         sudo docker run hello-world
+         ``` 
+    - Installer avec le script d'installation Docker
+    
+        1. Connectez-vous à votre système en tant qu'utilisateur avec des sudoprivilèges.
+        2. Mettez à jour votre système:
+         ```js 
+         sudo yum update -y
+         ```  
+     
+       3. Exécutez le script d'installation de Docker:
+         ```js 
+         curl -fsSL https://get.docker.com | sh;
+         ```
+             . Ce script ajoute le docker.reporéférentiel et installe Docker.
+
+       4.  Démarrer Docker:
+         ```js
+         sudo service docker start
+         ```
+      5.  Vérifiez Docker:
+        ```js
+        sudo docker run hello-world
+        ```
+- Le groupe Docker
+   - Le groupe Docker
+ 
+ ```
+    Si vous préférez, vous pouvez configurer un dockergroupe pour exécuter Docker (au lieu de root).
+    Cependant , comme dockerdoit y avoir sudoaccès, dockerreçoit le même accès que root.
+ ```
+
+      1. Exécutez la commande suivante pour créer un groupe Docker et ajouter votre utilisateur
+au groupe (remplacez USERNAME par votre nom d'utilisateur):
+
+     ```js
+        sudo groupadd docker && sudo usermod -aG docker USERNAME
+      ```
+      2. Déconnectez-vous et reconnectez-vous.
     Vérifiez que Docker fonctionne sans sudo:
+     ```js
      docker run hello-world
-    Démarrer Docker au démarrage
-    Exécutez l'une des opérations suivantes:
+     ```
+     
+      3. Démarrer Docker au démarrage
+         Exécutez l'une des opérations suivantes:
 
+   ````js
     sudo chkconfig docker on
     sudo systemctl enable docker
-    Problèmes courants
-    Remarque: les membres du groupe Docker ont des privilèges root . Hardening Docker est traité dans un futur tutoriel.
+    ````
+    
+    ````
+Problèmes courants
+    Remarque: les membres du groupe Docker ont des privilèges root .
+    Hardening Docker est traité dans un futur tutoriel.
 
 Ubuntu
 
-    Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04, vous devez mettre à jour votre noyau.
+    Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. 
+    Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04,
+    vous devez mettre à jour votre noyau.
 
     Debian
     Si vous exécutez Debian Wheezy, vous devez mettre à jour les sources avec des rétroportages.
 
     «Impossible de se connecter au démon Docker. Le «démon docker» est-il en cours d'exécution sur cet hôte? »
     Si vous obtenez cette erreur, vous devez désactiver DOCKER_HOST; exécuter unset DOCKER_HOSTpour effacer la variable.
+```
