@@ -65,9 +65,20 @@ Cette version est soumise à une licence fournie par Docker Inc.
          • Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
          ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
          
-         Installation 
+• Installation 
+
 - Commencez par télécharger [Docker Toolbox](https://www.docker.com/toolbox) et installez le programme.
 Notez que pendant l’installation Virtualbox ne doit pas être lancé.
-- test
-         
-         
+
+• Lancer un conteneur Docker
+
+- Avant de pouvoir lancer un conteneur Docker vous devez créer ou lancer une machine virtuelle existante.
+Il y a plusieurs moyens d’utiliser Docker sous Windows, via Docker Quickstart Terminal, l’invite de commandes Windows ou Powershell.
+
+
+      En utilisant Docker Quickstart Terminal
+     
+      • Commencez par double cliquer sur l’icone du programme sur votre bureau. L’application va alors
+      • Ouvrir un terminal
+      • Créer une machine virtuelle default et la démarrer
+      • Configurer la VM
