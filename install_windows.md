@@ -2,29 +2,34 @@
 
 - Insttalation de Docker sous windows 
      
-         • Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
-         • Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
+         Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
+         Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider :
+         [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
          ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
          
 • Installation 
 
-- Commencez par télécharger [Docker Toolbox](https://www.docker.com/toolbox) et installez le programme.
+- Commencez par télécharger 
+[Docker Toolbox](https://www.docker.com/toolbox) et installez le programme.
 Notez que pendant l’installation Virtualbox ne doit pas être lancé.
 
 • Lancer un conteneur Docker
 
-- Avant de pouvoir lancer un conteneur Docker vous devez créer ou lancer une machine virtuelle existante.
-Il y a plusieurs moyens d’utiliser Docker sous Windows, via Docker Quickstart Terminal, l’invite de commandes Windows ou Powershell.
+- Avant de pouvoir lancer un conteneur Docker vous devez créer
+ou lancer une machine virtuelle existante.
+Il y a plusieurs moyens d’utiliser Docker sous Windows,
+via Docker Quickstart Terminal, l’invite de commandes Windows ou Powershell.
 
 
       En utilisant Docker Quickstart Terminal
      
-      • Commencez par double cliquer sur l’icone du programme sur votre bureau. L’application va alors
-      • Ouvrir un terminal
-      • Créer une machine virtuelle default et la démarrer
-      • Configurer la VM
+      Commencez par double cliquer sur l’icone du programme sur votre bureau. L’application va alors
+      Ouvrir un terminal
+      Créer une machine virtuelle default et la démarrer
+      Configurer la VM
       
       Vous devez obtenir le resultat suivant :
+      
 ```console
 Running pre-create checks...
 Creating machine...
@@ -85,11 +90,12 @@ http://docs.docker.com/userguide/
     
         En utilisant l’invite de commandes Windows (cmd.exe)
 
-        •  Ouvrez une invite de commandes Windows et créez une nouvelle machine virtuelle Docke     
+        Ouvrez une invite de commandes Windows et créez une nouvelle machine virtuelle Docker
+        
 ```console 
 docker-machine create --driver virtualbox default
 ```   
-        • Si tout se passe bien voila ce que votre terminal devrait afficher
+        Si tout se passe bien voila ce que votre terminal devrait afficher
      
 
 ```console
@@ -117,7 +123,7 @@ Docker is up and running!
 To see how to connect Docker to this machine, run: docker-machine env default
 
 ```
-      • Vous pouvez lister vos machines virtuelles créer pour fonctionner avec Docker
+      Vous pouvez lister vos machines virtuelles créer pour fonctionner avec Docker
 
 ```console 
 docker-machine ls
@@ -130,31 +136,31 @@ NAME                ACTIVE   DRIVER       STATE     URL                         
 default        *        virtualbox   Running   tcp://192.168.99.101:2376
 ````
 
-       • Maintenant « lions » les commandes du shell à notre nouvelle VM
+       Maintenant « lions » les commandes du shell à notre nouvelle VM
 
 ```
 C:Users\Noobunbox> docker-machine env --shell cmd my-default
 ```
-       • Puis copier et coller la commande affichée afin de connecter l’invite de commandes à notre VM default
+       Puis copier et coller la commande affichée afin de connecter l’invite de commandes à notre VM default
 ```console 
 FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd default') DO %i
 ````
 
 
-       • Lancez la commande hello-world afin de vérifier que tout fonctionne
+       Lancez la commande hello-world afin de vérifier que tout fonctionne
 ```console 
 C:Users\Noobunbox> docker run hello-world
 ```
 
 
        En utilisant Powershell
-       • Lançons la même commande utilisée que pour l’invite de commandes afin de lier Powershell a notre VM
-         en modifiant la variable shell
+       Lançons la même commande utilisée que pour l’invite de commandes afin de lier Powershell a notre VM
+       en modifiant la variable shell
 ```console
 C:UsersNoobubnbox> docker-machine env --shell powershell default
 ```
 
-       • Powershell retourne une commande à rentrer afin qu’il puisse se connecter à la VM default. Lancez la commande
+       Powershell retourne une commande à rentrer afin qu’il puisse se connecter à la VM default. Lancez la commande
 
 ```console
 PS C:Users\Noobunbox> docker-machine env --shell powershell default
