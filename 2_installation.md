@@ -51,5 +51,7 @@ Cette version est soumise à une licence fournie par Docker Inc.
      - Docker sous windows 
      
          • Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
-           Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592)
+         • Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
+         ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/02/xvirtualization.jpg.pagespeed.ic.mMZzUjrmp-.webp)
+         
          
