@@ -47,7 +47,7 @@
 
 ### 2. Docker , qu'est ce que c'est ?
 
-    - Définition 
+  Définition 
     
     
     Docker est un outil open source, destiné aux développeurs 
@@ -63,7 +63,7 @@
     
     
     
-    - Comment ça marche ?
+  Comment ça marche ?
     
     
     A la différence d’un système de virtualisation classique,
