@@ -20,3 +20,9 @@
         - Docker Community Edition (Linux seulement) ;
         - Docker Desktop (Mac ou Windows) ;
         - Docker Enterprise (Linux seulement).
+        
+      Docker Desktop et Docker Community Edition (CE) sont deux versions de Docker gratuites. Avec les deux solutions, vous         aurez un Docker fonctionnel sur votre ordinateur.
+
+      Si vous êtes sous Windows ou macOS, utilisez Docker Desktop qui va créer pour vous l'ensemble des services nécessaires         au bon fonctionnement de Docker.
+      Si vous êtes sous Linux, prenez la version Community Edition (CE) ; vous utiliserez aussi cette version pour vos               serveurs.
+      La version Docker Enterprise ne ressemble pas du tout aux versions Desktop et CE. Celle-ci répond à des besoins plus           poussés des entreprises, et propose une interface de gestion d'infrastructures sous Docker. Cette version est soumise à       une licence fournie par Docker Inc.
