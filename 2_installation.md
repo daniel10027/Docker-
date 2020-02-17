@@ -82,3 +82,9 @@ Il y a plusieurs moyens d’utiliser Docker sous Windows, via Docker Quickstart 
       • Ouvrir un terminal
       • Créer une machine virtuelle default et la démarrer
       • Configurer la VM
+      
+      Vous devez obtenir le resultat suivant :
+```console
+foo@bar:~$ whoami
+foo
+```
