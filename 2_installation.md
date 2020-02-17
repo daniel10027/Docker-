@@ -140,15 +140,15 @@ $ docker run -it ubuntu bash
 For more examples and ideas, visit:
 http://docs.docker.com/userguide/
 
+````
+    
+        En utilisant l’invite de commandes Windows (cmd.exe)
 
-      En utilisant l’invite de commandes Windows (cmd.exe)
-
-     •  Ouvrez une invite de commandes Windows et créez une nouvelle machine virtuelle Docker
-     
-     ```console 
-     docker-machine create --driver virtualbox default
-     ```
-     • Si tout se passe bien voila ce que votre terminal devrait afficher
+        •  Ouvrez une invite de commandes Windows et créez une nouvelle machine virtuelle Docke     
+```console 
+docker-machine create --driver virtualbox default
+```   
+        • Si tout se passe bien voila ce que votre terminal devrait afficher
      
 
 ```console
@@ -206,7 +206,7 @@ C:Users\Noobunbox> docker run hello-world
 ```
 
 
-            En utilisant Powershell
+       En utilisant Powershell
        • Lançons la même commande utilisée que pour l’invite de commandes afin de lier Powershell a notre VM
          en modifiant la variable shell
 ```console
