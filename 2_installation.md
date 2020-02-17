@@ -1,7 +1,8 @@
 #### Pourquoi utiliser Docker ?
 
     Docker répond à une problématique forte dans le monde du développement.
-    Prenons un exemple : vous avez développé votre projet de Twitter Lite en local. Tout fonctionne bien, mais au moment de       mettre en production, vous vous rendez compte que vous ne savez pas comment déployer votre projet. Un autre exemple : vous     êtes dans une équipe de 10 personnes et chacun utilise un OS différent (Ubuntu, macOS, Windows, CentOS, etc.). Comment         faire pour avoir un environnement unifié et fonctionnel chez l'ensemble des développeurs ?
+    Prenons un exemple : vous avez développé votre projet de Twitter Lite en local. 
+    Tout fonctionne bien, mais au moment de mettre en production, vous vous rendez compte que vous ne savez pas comment           déployer votre projet. Un autre exemple : vous     êtes dans une équipe de 10 personnes et chacun utilise un OS différent     (Ubuntu, macOS, Windows, CentOS, etc.). Comment         faire pour avoir un environnement unifié et fonctionnel chez           l'ensemble des développeurs ?
    
     Docker répond à ces problématiques en créant des conteneurs. Grâce à Docker, vous n'aurez plus de problème de différence       d'environnement, et votre code marchera partout !
     
