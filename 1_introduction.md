@@ -126,9 +126,7 @@
     
 
 
-
-
-### - [x] Suivant =>> : Installation 
+- [x] Suivant =>> : Installation 
 
 
 
