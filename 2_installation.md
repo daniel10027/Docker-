@@ -8,9 +8,14 @@
     
 - [x] Utilisez Docker sur tous vos environnements
 ```
-    Docker est utilisé par de très nombreuses sociétés pour différents usages. Ainsi, un des premiers usages de Docker se         trouve dans la création d'environnements locaux. Il est plus simple d'utiliser Docker en local quand on travaille avec de     nombreuses versions différentes des logiciels, et ainsi ne pas avoir des problèmes de compatibilité entre elles.
+    Docker est utilisé par de très nombreuses sociétés pour différents usages.
+    Ainsi, un des premiers usages de Docker se trouve dans la création d'environnements locaux. 
+    Il est plus simple d'utiliser Docker en local quand on travaille avec de nombreuses versions 
+    différentes des logiciels, et ainsi ne pas avoir des problèmes de compatibilité entre elles.
 
-    On retrouve aussi Docker dans les domaines de la CI (Continous Integration, ou Intégration Continue) et de la CD               (Continous Delivery, ou Livraison Continue). Cela permet à la CI/CD de créer rapidement des espaces isolés pour faire         tourner vos tests.
+    On retrouve aussi Docker dans les domaines de la CI (Continous Integration,
+    ou Intégration Continue) et de la CD (Continous Delivery, ou Livraison Continue). 
+    Cela permet à la CI/CD de créer rapidement des espaces isolés pour faire tourner vos tests.
     Plus globalement, vous pouvez utiliser Docker sur l'ensemble de vos environnements.
  ```
     
