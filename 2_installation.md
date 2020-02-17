@@ -47,12 +47,19 @@ Cette version est soumise à une licence fournie par Docker Inc.
 ``` 
 
   2. Docker pour Mac , Linux & Windows 
+  
      - Quels sont les différences entre une utilisation de Docker sous Linux et sous Windows ?
+     
       ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/04/xlinux_docker_host.png.pagespeed.ic.igpO4IQ1nS.webp)
-        - Sous Linux, votre ordinateur est l’hôte et l’hôte Docker. Le client Docker, le daemon et tous les conteneurs se lanceront directement depuis votre machine.
        ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/04/xwin_docker_host.png.pagespeed.ic.p2mLbveWVR.webp)
-        - Sous Windows, l’hôte de Docker est une machine virtuelle. Le client Docker tourne sous Windows tandis que le daemon ainsi que les conteneurs tourneront sur cette VM
-     - Docker sous windows 
+       
+      •Sous Windows, l’hôte de Docker est une machine virtuelle. 
+      Le client Docker tourne sous Windows tandis que le daemon ainsi que les conteneurs tourneront sur cette VM
+      
+      •Sous Linux, votre ordinateur est l’hôte et l’hôte Docker. Le client Docker, le daemon et tous les conteneurs se               lanceront directement depuis votre machine.
+        
+     
+     - Insttalation de Docker sous windows 
      
          • Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
          • Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
