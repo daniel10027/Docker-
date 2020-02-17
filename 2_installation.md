@@ -140,7 +140,92 @@ $ docker run -it ubuntu bash
 For more examples and ideas, visit:
 http://docs.docker.com/userguide/
 
-```v
+
+      En utilisant l’invite de commandes Windows (cmd.exe)
+
+     •  Ouvrez une invite de commandes Windows et créez une nouvelle machine virtuelle Docker
+     
+     ```console 
+     docker-machine create --driver virtualbox default
+     ```
+     • Si tout se passe bien voila ce que votre terminal devrait afficher
+     
+
+```console
+     Microsoft Windows [version 10.0.10240]
+(c) 2015 Microsoft Corporation. Tous droits réservés.
+
+C:Users\Noobunbox>docker-machine create --driver virtualbox default
+Running pre-create checks...
+Creating machine...
+(default) Copying C:Users\Noobunbox.dockermachine\cache\boot2docker.iso to C:\Users\Noobunbox\.dockermachine\machines\defaultboot2docker.iso...
+(default) Creating VirtualBox VM...
+(default) Creating SSH key...
+(default) Starting the VM...
+(default) Waiting for an IP...
+Waiting for machine to be running, this may take a few minutes...
+Machine is running, waiting for SSH to be available...
+Detecting operating system of created instance...
+Detecting the provisioner...
+Provisioning with boot2docker...
+Copying certs to the local machine directory...
+Copying certs to the remote machine...
+Setting Docker configuration on the remote daemon...
+Checking connection to Docker...
+Docker is up and running!
+To see how to connect Docker to this machine, run: docker-machine env default
+
+```
+      • Vous pouvez lister vos machines virtuelles créer pour fonctionner avec Docker
+
+```console 
+docker-machine ls
+````
+ #### Ce qui vous donne :
+
+```console 
+C:Users\Noobunbox> docker-machine ls
+NAME                ACTIVE   DRIVER       STATE     URL                         SWARM
+default        *        virtualbox   Running   tcp://192.168.99.101:2376
+````
+
+       • Maintenant « lions » les commandes du shell à notre nouvelle VM
+
+```
+C:Users\Noobunbox> docker-machine env --shell cmd my-default
+```
+       • Puis copier et coller la commande affichée afin de connecter l’invite de commandes à notre VM default
+```console 
+FOR /f "tokens=*" %i IN ('docker-machine env --shell cmd default') DO %i
+````
+
+
+       • Lancez la commande hello-world afin de vérifier que tout fonctionne
+```console 
+C:Users\Noobunbox> docker run hello-world
+```
+
+
+            En utilisant Powershell
+       • Lançons la même commande utilisée que pour l’invite de commandes afin de lier Powershell a notre VM
+         en modifiant la variable shell
+```console
+C:UsersNoobubnbox> docker-machine env --shell powershell default
+```
+
+       • Powershell retourne une commande à rentrer afin qu’il puisse se connecter à la VM default. Lancez la commande
+
+```console
+PS C:Users\Noobunbox> docker-machine env --shell powershell default
+$Env:DOCKER_TLS_VERIFY = "1"
+$Env:DOCKER_HOST = "tcp://192.168.99.104:2376"
+$Env:DOCKER_CERT_PATH = "C:\Users\Noobunbox\.dockermachine\machines\default"
+$Env:DOCKER_MACHINE_NAME = "default"
+# Run this command to configure your shell:
+# & "C:\Program Files\Docker\ Toolboxdocker-machine.exe" env --shell powershell default | Invoke-Expression
+
+PS C:Users\Noobunbox> & "C:\Program Files\Docker\ Toolboxdocker-machine.exe" env --shell powershell default | Invoke-Expression
+```
 
 
 
