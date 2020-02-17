@@ -2,9 +2,15 @@
 
     Docker répond à une problématique forte dans le monde du développement.
     Prenons un exemple : vous avez développé votre projet de Twitter Lite en local. 
-    Tout fonctionne bien, mais au moment de mettre en production, vous vous rendez compte que vous ne savez pas comment           déployer votre projet. Un autre exemple : vous     êtes dans une équipe de 10 personnes et chacun utilise un OS différent     (Ubuntu, macOS, Windows, CentOS, etc.). Comment         faire pour avoir un environnement unifié et fonctionnel chez           l'ensemble des développeurs ?
+    Tout fonctionne bien, mais au moment de mettre en production, vous vous rendez compte
+    que vous ne savez pas comment déployer votre projet. Un autre exemple : vous êtes dans
+    une équipe de 10 personnes et chacun utilise un OS différent (Ubuntu, macOS, Windows, 
+    CentOS, etc.). Comment faire pour avoir un environnement unifié et fonctionnel chez 
+    l'ensemble des développeurs ?
    
-    Docker répond à ces problématiques en créant des conteneurs. Grâce à Docker, vous n'aurez plus de problème de différence       d'environnement, et votre code marchera partout !
+    Docker répond à ces problématiques en créant des conteneurs. 
+    Grâce à Docker, vous n'aurez plus de problème de différence d'environnement,
+    et votre code marchera partout !
     
 - [x] Utilisez Docker sur tous vos environnements
 ```
@@ -45,3 +51,5 @@ Cette version est soumise à une licence fournie par Docker Inc.
      - Docker sous windows 
      
          • Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
+           Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592)
+         
