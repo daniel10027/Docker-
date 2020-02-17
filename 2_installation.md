@@ -39,3 +39,9 @@ Celle-ci répond à des besoins plus poussés des entreprises, et propose une in
 de gestion d'infrastructures sous Docker. 
 Cette version est soumise à une licence fournie par Docker Inc.
 ``` 
+
+  2. Docker pour Mac & Windows 
+  
+     - Docker sous windows 
+     
+         • Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS et                            reconnue par Windows.
