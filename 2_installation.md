@@ -47,6 +47,9 @@ Cette version est soumise à une licence fournie par Docker Inc.
 ``` 
 
   2. Docker pour Mac & Windows 
+     - Quels sont les différences entre une utilisation de Docker sous Linux et sous Windows ?
+      ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/04/xlinux_docker_host.png.pagespeed.ic.igpO4IQ1nS.webp)
+       ![Image of Yaktocat](https://www.noobunbox.net/wp-content/uploads/2016/04/xwin_docker_host.png.pagespeed.ic.p2mLbveWVR.webp)
   
      - Docker sous windows 
      
