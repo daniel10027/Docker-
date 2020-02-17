@@ -241,25 +241,25 @@ au groupe (remplacez USERNAME par votre nom d'utilisateur):
       3. Démarrer Docker au démarrage
          Exécutez l'une des opérations suivantes:
 
-   ````js
+    ````js
     sudo chkconfig docker on
     sudo systemctl enable docker
     ````
     
+    ````js
+    Problèmes courants
+        Remarque: les membres du groupe Docker ont des privilèges root .
+        Hardening Docker est traité dans un futur tutoriel.
+
+    Ubuntu
+
+        Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. 
+        Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04,
+        vous devez mettre à jour votre noyau.
+
+        Debian
+        Si vous exécutez Debian Wheezy, vous devez mettre à jour les sources avec des rétroportages.
+
+        «Impossible de se connecter au démon Docker. Le «démon docker» est-il en cours d'exécution sur cet hôte? »
+        Si vous obtenez cette erreur, vous devez désactiver DOCKER_HOST; exécuter unset DOCKER_HOSTpour effacer la variable.
     ````
-Problèmes courants
-    Remarque: les membres du groupe Docker ont des privilèges root .
-    Hardening Docker est traité dans un futur tutoriel.
-
-Ubuntu
-
-    Ubuntu Utopic 14.10 et 15.05 existe dans le aptréférentiel de Docker sans support officiel. 
-    Mettre à niveau vers 15.10 ou [de préférence] 16.04. Si vous utilisez Ubuntu 12.04,
-    vous devez mettre à jour votre noyau.
-
-    Debian
-    Si vous exécutez Debian Wheezy, vous devez mettre à jour les sources avec des rétroportages.
-
-    «Impossible de se connecter au démon Docker. Le «démon docker» est-il en cours d'exécution sur cet hôte? »
-    Si vous obtenez cette erreur, vous devez désactiver DOCKER_HOST; exécuter unset DOCKER_HOSTpour effacer la variable.
-```
