@@ -3,7 +3,7 @@
 
 - [x] Petite Histoire 
 
-    ````
+    
     Les machines virtuelles (VM) sont de plus en plus utilisées par les entreprises.
     Une VM est un environnement de système d’exploitation ou d’application installé sur logiciel.
     Elle permet à l’utilisateur de profiter de la même expérience que sur une machine physique,
@@ -19,39 +19,37 @@
     et requièrent donc beaucoup de puissance de calcul. Pour remédier à ce problème, 
     de nombreuses firmes se tournent vers les containers, et par extension vers Docker.
 
-    ````
+    
 ### 1. Qu'est ce qu'un conteneur ?
 
-    ```
+   
     Avant d’aborder Docker, il est indispensable de rappeler ce qu’est une image container.
     Il s’agit d’un ensemble de processus logiciels léger et indépendant, regroupant tous les 
     fichiers nécessaires à l’exécution des processus : code, runtime, outils système,
     bibliothèque et paramètres.
     Ils peuvent être utilisés pour exécuter des applications Linux ou Windows.
-    ````
-
-    ````
+    
+    
     Les containers sont donc proches des machines virtuelles,
     mais présentent un avantage important. Alors que la virtualisation consiste à 
     exécuter de nombreux systèmes d’exploitation sur un seul et même système, 
     les containers se partagent le même noyau de système d’exploitation 
     et isolent les processus de l’application du reste du système.
-    ```
-
-    ```
+    
+    
     Pour faire simple, plutôt que de virtualiser le hardware comme l’hyperviseur,
     le container virtualise le système d’exploitation.
     Il est donc nettement plus efficient qu’un hyperviseur en termes de consommation 
     des ressources système. Concrètement, il est possible d’exécuter près de 4 à 6 fois 
     plus d’instances d’applications avec un container qu’avec des machines 
     virtuelles comme Xen ou KVM sur le même hardware.
-    ````
+    
 
 ### 2. Docker , qu'est ce que c'est ?
 
     - Définition 
     
-    ```
+    
     Docker est un outil open source, destiné aux développeurs 
     et administrateurs systèmes, 
     dont l’objectif est de faciliter le développement,
@@ -63,21 +61,21 @@
     n’importe où : d’ordinateurs portables Mac ou Windows, des machines virtuelles, 
     de serveurs de production etc.
     
-    ````
+    
     
     - Comment ça marche ?
     
-    ```
+    
     A la différence d’un système de virtualisation classique,
     les conteneurs Docker partagent les ressources de la machine hôte et font l’économie 
     de l’installation d’un système  d’exploitation complet.
     Le conteneur ne contient donc que la partie applicative nécessaire ainsi que ses dépendances,
     et fonctionne de la même façon que pour les machines virtuelles de façon isolée et autonome.
-    ``` 
+    
     
 ### 3. Docker , quelles sont les fonctionnalités ?
 
-    ````
+    
 
     La plateforme de conteneurisation repose sur sept composants principaux. 
     Le Docker Engine est un outil client-serveur sur lequel repose la technologie de 
@@ -101,7 +99,7 @@
     une seul ensemble.
     Ainsi, les utilisateurs peuvent rapidement échelonner le déploiement de containers.
 
-    ````
+    
 ### 4 . Les avantages et inconvenients 
 
 ![Image of Yaktocat](https://www.lebigdata.fr/wp-content/uploads/2018/05/docker-avantages.jpg)
@@ -125,7 +123,7 @@
     Pour minimiser ce risque, certaines entreprises exécutent leurs 
     containers au sein d’une machine virtuelle.
 
-    ````
+    
 
 
 
