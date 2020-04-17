@@ -15,7 +15,7 @@
 [Docker Toolbox](https://www.docker.com/toolbox) et installez le programme.
 Notez que pendant l’installation Virtualbox ne doit pas être lancé.
 
-• Lancer un conteneur Docker
+• Lancer un conteneur Dovcker
 
 - Avant de pouvoir lancer un conteneur Docker vous devez créer
 ou lancer une machine virtuelle existante.
