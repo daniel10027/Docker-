@@ -23,7 +23,7 @@ Il y a plusieurs moyens d’utiliser Docker sous Windows,
 via Docker Quickstart Terminal, l’invite de commandes Windows ou  Powershell.
 
 
-      En utilisant Docker Quickstart Terminal
+      En utilisant Docker Quickstart Terminal 
      
       Commencez par double cliquer sur l’icone du programme sur votre bureau. L’application va alors
       Ouvrir un terminal
