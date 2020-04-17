@@ -20,7 +20,7 @@ Notez que pendant l’installation Virtualbox ne doit pas être lancé.
 - Avant de pouvoir lancer un conteneur Docker vous devez créer
 ou lancer une machine virtuelle existante.
 Il y a plusieurs moyens d’utiliser Docker sous Windows,
-via Docker Quickstart Terminal, l’invite de commandes Windows ou Powershell.
+via Docker Quickstart Terminal, l’invite de commandes Windows ou  Powershell.
 
 
       En utilisant Docker Quickstart Terminal
