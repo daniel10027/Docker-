@@ -2,7 +2,7 @@
 
 - Insttalation de Docker sous windows 
      
-         Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit activée dans le BIOS
+         Assurez vous que votre CPU supporte la virtualisation et que celle-ci soit acti vée dans le BIOS
          et reconnue par Windows.
          Si vous ne maitrisez pas trop le bios , ce logiciel pourra vous aider :
          [Microsoft](https://www.microsoft.com/en-us/download/details.aspx?id=592) 
